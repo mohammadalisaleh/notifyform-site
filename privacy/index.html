@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — NotifyForm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#0d0d0d; --bg2:#141414; --line:#2a2a2a; --line2:#333; --text:#e8e6e0; --text2:#8a8680; --text3:#555; --discord:#5865F2; }
+    body { font-family:'IBM Plex Mono',monospace; background:var(--bg); color:var(--text); font-size:14px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events:none; z-index:1000; opacity:0.35; }
+    nav { border-bottom:1px solid var(--line); padding:16px 40px; display:flex; align-items:center; }
+    .logo { font-size:15px; font-weight:600; letter-spacing:-0.02em; color:var(--text); text-decoration:none; }
+    .logo .slash { color:var(--discord); margin:0 1px; }
+    .content { max-width:680px; margin:0 auto; padding:80px 40px; }
+    .content h1 { font-size:36px; font-weight:600; letter-spacing:-0.04em; margin-bottom:8px; }
+    .content .date { font-size:11px; color:var(--text3); font-weight:300; margin-bottom:56px; letter-spacing:0.05em; }
+    .content h2 { font-size:13px; font-weight:600; margin-top:44px; margin-bottom:12px; letter-spacing:-0.01em; color:var(--text); }
+    .content h2::before { content:'// '; color:var(--text3); }
+    .content p { font-size:13px; color:var(--text2); font-weight:300; margin-bottom:14px; font-family:'IBM Plex Sans',sans-serif; line-height:1.75; }
+    .content a { color:var(--discord); text-decoration:none; border-bottom:1px solid rgba(88,101,242,0.3); }
+    .content a:hover { border-bottom-color:var(--discord); }
+    footer { border-top:1px solid var(--line); padding:28px 40px; display:flex; gap:24px; }
+    footer a { font-size:11px; color:var(--text3); text-decoration:none; }
+    footer a:hover { color:var(--text2); }
+    @media(max-width:640px) { nav { padding:14px 20px; } .content { padding:56px 20px; } footer { padding:24px 20px; } }
+  </style>
+</head>
+<body>
+  <nav><a href="/" class="logo">notify<span class="slash">/</span>form</a></nav>
+  <div class="content">
+    <h1>Privacy Policy</h1>
+    <p class="date">Last updated: January 1, 2025</p>
+
+    <p>NotifyForm is operated by Mohammadali Saleh as a sole proprietor. This Privacy Policy explains how we collect, use, and protect information when you use our Google Workspace Add-on ("the Service").</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>The NotifyForm add-on stores the following data locally in your Google account using Google Apps Script's PropertiesService:</p>
+    <p>— Your Discord webhook URL (stored only in your own Google account, not on our servers)<br />
+    — Your custom message template (stored only in your own Google account)<br />
+    — Your notification count for the current month (stored only in your own Google account)<br />
+    — Your license key, if you have purchased a Pro plan (stored only in your own Google account)</p>
+    <p>When you purchase a Pro plan, our payment processor (Lemon Squeezy) collects your name, email address, and payment information. We receive only your email address and license key status. We do not store your payment card details.</p>
+
+    <h2>2. How We Use Your Information</h2>
+    <p>We use the information above solely to provide the Service — to send Discord notifications when your Google Form receives a submission, and to verify whether your account is on the Free or Pro plan. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+    <h2>3. Google Form Data</h2>
+    <p>When a form is submitted, NotifyForm reads the response data to format and send it to your Discord webhook. This data passes directly from Google's servers to Discord's servers via your webhook URL. We do not store, log, or retain any form response data on our servers.</p>
+
+    <h2>4. Data Storage and Security</h2>
+    <p>All configuration data (webhook URL, message template, notification count) is stored within your Google account using Google Apps Script's PropertiesService. This data is governed by Google's own security and privacy practices. We do not have access to this data unless you explicitly share it with us for support purposes.</p>
+
+    <h2>5. Third-Party Services</h2>
+    <p>— <strong>Discord</strong>: Form responses are sent to Discord via your webhook URL. Discord's use of this data is governed by <a href="https://discord.com/privacy" target="_blank">Discord's Privacy Policy</a>.<br /><br />
+    — <strong>Lemon Squeezy</strong>: Payment processing for Pro plans. Governed by <a href="https://www.lemonsqueezy.com/privacy" target="_blank">Lemon Squeezy's Privacy Policy</a>.<br /><br />
+    — <strong>Google</strong>: The add-on runs on Google Apps Script infrastructure. Governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+
+    <h2>6. Data Retention</h2>
+    <p>Configuration data persists until you uninstall the add-on or manually clear it. You can remove all stored data at any time by uninstalling NotifyForm from your Google account.</p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>The Service is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify users of material changes by updating the "Last updated" date at the top of this page.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions about this Privacy Policy: <a href="mailto:contact@notifyform.com">contact@notifyform.com</a></p>
+  </div>
+  <footer>
+    <a href="/">notifyform</a>
+    <a href="/privacy">privacy</a>
+    <a href="/terms">terms</a>
+  </footer>
+</body>
+</html>
