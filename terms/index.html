@@ -5,48 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service — NotifyForm</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --black: #0a0a0a; --white: #f4f4f0; --blurple: #5865F2;
-      --dim: #888; --border: #222;
-      --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif;
-    }
-    body { background: var(--black); color: var(--white); font-family: var(--sans); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    nav { padding: 20px 40px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
-    .wordmark { font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--white); text-decoration: none; }
-    .wordmark span { color: var(--blurple); }
-    main { max-width: 680px; margin: 0 auto; padding: 60px 24px 80px; }
-    h1 { font-family: var(--mono); font-size: 28px; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 8px; }
-    .last-updated { font-size: 12px; color: var(--dim); font-family: var(--mono); margin-bottom: 48px; }
-    h2 { font-family: var(--mono); font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blurple); margin: 36px 0 12px; }
-    p { font-weight: 300; color: #ccc; margin-bottom: 12px; }
-    a { color: var(--blurple); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer { border-top: 1px solid var(--border); padding: 20px 40px; display: flex; gap: 24px; justify-content: center; }
-    footer a { font-family: var(--mono); font-size: 11px; color: #444; text-decoration: none; letter-spacing: 0.04em; }
-    footer a:hover { color: var(--dim); }
+    :root { --blurple: #5865F2; --text: #111827; --muted: #6B7280; --border: #E5E7EB; --bg: #fff; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--blurple); }
+    nav { border-bottom: 1px solid var(--border); padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 16px; font-weight: 700; color: var(--text); text-decoration: none; }
+    .nav-logo span { color: var(--blurple); }
+    main { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+    h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+    .meta { font-size: 13px; color: var(--muted); margin-bottom: 48px; }
+    h2 { font-size: 16px; font-weight: 700; margin: 36px 0 10px; }
+    p { color: #374151; margin-bottom: 12px; }
+    ul { color: #374151; padding-left: 20px; margin-bottom: 12px; }
+    ul li { margin-bottom: 6px; }
+    footer { border-top: 1px solid var(--border); padding: 24px 40px; display: flex; gap: 24px; justify-content: center; }
+    footer a { font-size: 14px; color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
   </style>
 </head>
 <body>
 <nav>
-  <a href="https://notifyform.com" class="wordmark">notify<span>/</span>form</a>
+  <a href="/" class="nav-logo">notify<span>/</span>form</a>
 </nav>
 <main>
   <h1>Terms of Service</h1>
-  <p class="last-updated">Last updated: May 2, 2025</p>
+  <p class="meta">Last updated: May 2, 2025</p>
 
-  <p>These Terms of Service govern your use of NotifyForm (the "Service"), a Google Workspace Add-on developed and operated by Mohammadali Saleh. By installing or using the Service, you agree to be bound by these Terms.</p>
+  <p>These Terms of Service govern your use of NotifyForm (the "Service"), a suite of Google Workspace Add-ons developed and operated by Mohammadali Saleh. By installing or using the Service, you agree to be bound by these Terms.</p>
 
   <h2>1. Description of Service</h2>
-  <p>NotifyForm is a Google Workspace Add-on that sends Discord channel notifications when a Google Form receives a new submission. The Service is provided via the Google Workspace Marketplace.</p>
+  <p>NotifyForm is a suite of Google Workspace Add-ons that send notifications to platforms such as Discord, Slack, and Telegram when a Google Form receives a new submission. The Service is provided via the Google Workspace Marketplace.</p>
 
   <h2>2. Eligibility</h2>
   <p>You must be at least 13 years of age to use the Service.</p>
 
   <h2>3. Free and Pro Plans</h2>
-  <p><strong>Free Plan:</strong> 30 Discord notifications per calendar month at no cost.</p>
+  <p><strong>Free Plan:</strong> 30 notifications per calendar month at no cost.</p>
   <p><strong>Pro Plan:</strong> Unlimited notifications for $3.99 per month, billed monthly through Paddle.</p>
   <p>We reserve the right to change pricing at any time. Price changes will be communicated to existing Pro subscribers at least 30 days in advance.</p>
 
@@ -55,7 +52,7 @@
   <p>You are entitled to a full refund if requested within 14 days of purchase. Contact <a href="mailto:contact@notifyform.com">contact@notifyform.com</a> for refund requests.</p>
 
   <h2>5. Acceptable Use</h2>
-  <p>You agree not to use the Service to send spam, abusive content, or any content that violates Discord's Terms of Service or applicable laws. You are solely responsible for the content of your Google Forms and any messages sent to Discord via the Service.</p>
+  <p>You agree not to use the Service to send spam, abusive content, or any content that violates the terms of the platform you are sending to (Discord, Slack, Telegram, etc.) or applicable laws. You are solely responsible for the content of your Google Forms and any messages sent via the Service.</p>
 
   <h2>6. Availability and Modifications</h2>
   <p>We do not guarantee uninterrupted availability of the Service. We may modify, suspend, or discontinue the Service at any time with reasonable notice. We are not liable for loss or inconvenience caused by interruptions.</p>
@@ -82,9 +79,10 @@
   <p><a href="mailto:contact@notifyform.com">contact@notifyform.com</a></p>
 </main>
 <footer>
-  <a href="https://notifyform.com">notifyform</a>
-  <a href="https://notifyform.com/privacy">privacy</a>
-  <a href="https://notifyform.com/terms">terms</a>
+  <a href="/">Home</a>
+  <a href="/privacy">Privacy</a>
+  <a href="/terms">Terms</a>
+  <a href="mailto:contact@notifyform.com">Contact</a>
 </footer>
 </body>
 </html>
