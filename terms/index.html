@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service — NotifyForm</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg:#0d0d0d; --bg2:#141414; --line:#2a2a2a; --line2:#333; --text:#e8e6e0; --text2:#8a8680; --text3:#555; --discord:#5865F2; }
-    body { font-family:'IBM Plex Mono',monospace; background:var(--bg); color:var(--text); font-size:14px; line-height:1.6; -webkit-font-smoothing:antialiased; }
-    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events:none; z-index:1000; opacity:0.35; }
-    nav { border-bottom:1px solid var(--line); padding:16px 40px; display:flex; align-items:center; }
-    .logo { font-size:15px; font-weight:600; letter-spacing:-0.02em; color:var(--text); text-decoration:none; }
-    .logo .slash { color:var(--discord); margin:0 1px; }
-    .content { max-width:680px; margin:0 auto; padding:80px 40px; }
-    .content h1 { font-size:36px; font-weight:600; letter-spacing:-0.04em; margin-bottom:8px; }
-    .content .date { font-size:11px; color:var(--text3); font-weight:300; margin-bottom:56px; letter-spacing:0.05em; }
-    .content h2 { font-size:13px; font-weight:600; margin-top:44px; margin-bottom:12px; color:var(--text); }
-    .content h2::before { content:'// '; color:var(--text3); }
-    .content p { font-size:13px; color:var(--text2); font-weight:300; margin-bottom:14px; font-family:'IBM Plex Sans',sans-serif; line-height:1.75; }
-    .content a { color:var(--discord); text-decoration:none; border-bottom:1px solid rgba(88,101,242,0.3); }
-    .content a:hover { border-bottom-color:var(--discord); }
-    footer { border-top:1px solid var(--line); padding:28px 40px; display:flex; gap:24px; }
-    footer a { font-size:11px; color:var(--text3); text-decoration:none; }
-    footer a:hover { color:var(--text2); }
-    @media(max-width:640px) { nav { padding:14px 20px; } .content { padding:56px 20px; } footer { padding:24px 20px; } }
+    :root {
+      --black: #0a0a0a; --white: #f4f4f0; --blurple: #5865F2;
+      --dim: #888; --border: #222;
+      --mono: 'IBM Plex Mono', monospace; --sans: 'IBM Plex Sans', sans-serif;
+    }
+    body { background: var(--black); color: var(--white); font-family: var(--sans); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    nav { padding: 20px 40px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .wordmark { font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--white); text-decoration: none; }
+    .wordmark span { color: var(--blurple); }
+    main { max-width: 680px; margin: 0 auto; padding: 60px 24px 80px; }
+    h1 { font-family: var(--mono); font-size: 28px; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 8px; }
+    .last-updated { font-size: 12px; color: var(--dim); font-family: var(--mono); margin-bottom: 48px; }
+    h2 { font-family: var(--mono); font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blurple); margin: 36px 0 12px; }
+    p { font-weight: 300; color: #ccc; margin-bottom: 12px; }
+    a { color: var(--blurple); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { border-top: 1px solid var(--border); padding: 20px 40px; display: flex; gap: 24px; justify-content: center; }
+    footer a { font-family: var(--mono); font-size: 11px; color: #444; text-decoration: none; letter-spacing: 0.04em; }
+    footer a:hover { color: var(--dim); }
   </style>
 </head>
 <body>
-  <nav><a href="/" class="logo">notify<span class="slash">/</span>form</a></nav>
-  <div class="content">
-    <h1>Terms of Service</h1>
-    <p class="date">Last updated: January 1, 2025</p>
+<nav>
+  <a href="https://notifyform.com" class="wordmark">notify<span>/</span>form</a>
+</nav>
+<main>
+  <h1>Terms of Service</h1>
+  <p class="last-updated">Last updated: May 2, 2025</p>
 
-    <p>These Terms of Service govern your use of NotifyForm (the "Service"), a Google Workspace Add-on developed and operated by Mohammadali Saleh. By installing or using the Service, you agree to be bound by these Terms.</p>
+  <p>These Terms of Service govern your use of NotifyForm (the "Service"), a Google Workspace Add-on developed and operated by Mohammadali Saleh. By installing or using the Service, you agree to be bound by these Terms.</p>
 
-    <h2>1. Description of Service</h2>
-    <p>NotifyForm is a Google Workspace Add-on that sends Discord channel notifications when a Google Form receives a new submission. The Service is provided via the Google Workspace Marketplace.</p>
+  <h2>1. Description of Service</h2>
+  <p>NotifyForm is a Google Workspace Add-on that sends Discord channel notifications when a Google Form receives a new submission. The Service is provided via the Google Workspace Marketplace.</p>
 
-    <h2>2. Eligibility</h2>
-    <p>You must be at least 13 years of age to use the Service.</p>
+  <h2>2. Eligibility</h2>
+  <p>You must be at least 13 years of age to use the Service.</p>
 
-    <h2>3. Free and Pro Plans</h2>
-    <p>— <strong>Free Plan:</strong> 30 Discord notifications per calendar month at no cost.<br /><br />
-    — <strong>Pro Plan:</strong> Unlimited notifications for $3.99 per month, billed monthly through Lemon Squeezy.</p>
-    <p>We reserve the right to change pricing at any time. Price changes will be communicated to existing Pro subscribers at least 30 days in advance.</p>
+  <h2>3. Free and Pro Plans</h2>
+  <p><strong>Free Plan:</strong> 30 Discord notifications per calendar month at no cost.</p>
+  <p><strong>Pro Plan:</strong> Unlimited notifications for $3.99 per month, billed monthly through Paddle.</p>
+  <p>We reserve the right to change pricing at any time. Price changes will be communicated to existing Pro subscribers at least 30 days in advance.</p>
 
-    <h2>4. Payment and Refunds</h2>
-    <p>Pro plan payments are processed by Lemon Squeezy. Subscriptions renew automatically each month until cancelled. You may cancel at any time; cancellation takes effect at the end of the current billing period. Refund requests made within 7 days of a charge will be considered on a case-by-case basis. Contact <a href="mailto:contact@notifyform.com">contact@notifyform.com</a> for refund requests.</p>
+  <h2>4. Payment and Refunds</h2>
+  <p>Pro plan payments are processed by Paddle. Subscriptions renew automatically each month until cancelled. You may cancel at any time; cancellation takes effect at the end of the current billing period.</p>
+  <p>You are entitled to a full refund if requested within 14 days of purchase. Contact <a href="mailto:contact@notifyform.com">contact@notifyform.com</a> for refund requests.</p>
 
-    <h2>5. Acceptable Use</h2>
-    <p>You agree not to use the Service to send spam, abusive content, or any content that violates Discord's Terms of Service or applicable laws. You are solely responsible for the content of your Google Forms and any messages sent to Discord via the Service.</p>
+  <h2>5. Acceptable Use</h2>
+  <p>You agree not to use the Service to send spam, abusive content, or any content that violates Discord's Terms of Service or applicable laws. You are solely responsible for the content of your Google Forms and any messages sent to Discord via the Service.</p>
 
-    <h2>6. Availability and Modifications</h2>
-    <p>We do not guarantee uninterrupted availability of the Service. We may modify, suspend, or discontinue the Service at any time with reasonable notice. We are not liable for loss or inconvenience caused by interruptions.</p>
+  <h2>6. Availability and Modifications</h2>
+  <p>We do not guarantee uninterrupted availability of the Service. We may modify, suspend, or discontinue the Service at any time with reasonable notice. We are not liable for loss or inconvenience caused by interruptions.</p>
 
-    <h2>7. Intellectual Property</h2>
-    <p>The Service is owned by Mohammadali Saleh. You are granted a limited, non-exclusive, non-transferable license to use the Service for its intended purpose. You may not copy, modify, reverse engineer, or redistribute the Service.</p>
+  <h2>7. Intellectual Property</h2>
+  <p>The Service is owned by Mohammadali Saleh. You are granted a limited, non-exclusive, non-transferable license to use the Service for its intended purpose. You may not copy, modify, reverse engineer, or redistribute the Service.</p>
 
-    <h2>8. Disclaimer of Warranties</h2>
-    <p>The Service is provided "as is" without warranties of any kind, express or implied. We do not warrant that the Service will be error-free or uninterrupted.</p>
+  <h2>8. Disclaimer of Warranties</h2>
+  <p>The Service is provided "as is" without warranties of any kind, express or implied. We do not warrant that the Service will be error-free or uninterrupted.</p>
 
-    <h2>9. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, Mohammadali Saleh shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Service. Our total liability for any claim shall not exceed the amount you paid us in the three months preceding the claim.</p>
+  <h2>9. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by law, Mohammadali Saleh shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Service. Our total liability for any claim shall not exceed the amount you paid us in the three months preceding the claim.</p>
 
-    <h2>10. Termination</h2>
-    <p>We reserve the right to terminate or suspend your access to the Service at any time for conduct that violates these Terms or is harmful to other users or third parties.</p>
+  <h2>10. Termination</h2>
+  <p>We reserve the right to terminate or suspend your access to the Service at any time for conduct that violates these Terms or is harmful to other users or third parties.</p>
 
-    <h2>11. Governing Law</h2>
-    <p>These Terms are governed by the laws of Tanzania. Disputes will be resolved through good-faith negotiation.</p>
+  <h2>11. Governing Law</h2>
+  <p>These Terms are governed by the laws of Tanzania. Disputes will be resolved through good-faith negotiation.</p>
 
-    <h2>12. Changes to These Terms</h2>
-    <p>We may update these Terms from time to time. Continued use of the Service after changes constitutes acceptance of the updated Terms.</p>
+  <h2>12. Changes to These Terms</h2>
+  <p>We may update these Terms from time to time. Continued use of the Service after changes constitutes acceptance of the updated Terms.</p>
 
-    <h2>13. Contact</h2>
-    <p><a href="mailto:contact@notifyform.com">contact@notifyform.com</a></p>
-  </div>
-  <footer>
-    <a href="/">notifyform</a>
-    <a href="/privacy">privacy</a>
-    <a href="/terms">terms</a>
-  </footer>
+  <h2>13. Contact</h2>
+  <p><a href="mailto:contact@notifyform.com">contact@notifyform.com</a></p>
+</main>
+<footer>
+  <a href="https://notifyform.com">notifyform</a>
+  <a href="https://notifyform.com/privacy">privacy</a>
+  <a href="https://notifyform.com/terms">terms</a>
+</footer>
 </body>
 </html>
