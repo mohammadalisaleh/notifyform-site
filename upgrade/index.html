@@ -137,6 +137,13 @@
   var PADDLE_CLIENT_TOKEN = 'live_5322744e8d90336661646fe8131';
   var PADDLE_PRICE_ID     = 'pri_01kqkytvyhjz72qvsv8zdg29qt';
 
+  // Google account email handed over by the add-on sidebar via ?email=
+  function getUserEmail() {
+    var params = new URLSearchParams(window.location.search);
+    return (params.get('email') || '').trim().toLowerCase();
+  }
+  var USER_EMAIL = getUserEmail();
+
   Paddle.Initialize({
     token: PADDLE_CLIENT_TOKEN,
     eventCallback: function(event) {
@@ -153,10 +160,21 @@
     btn.disabled = true;
     label.textContent = 'Opening checkout…';
 
-    Paddle.Checkout.open({
+    var options = {
       items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
       settings: { displayMode: 'overlay', theme: 'light', locale: 'en' }
-    });
+    };
+
+    // Carry the Google account email through to the webhook so KV is keyed
+    // on exactly the email /validate later queries with. customData is the
+    // source of truth the Worker reads; prefilling customer.email just saves
+    // the user retyping it.
+    if (USER_EMAIL) {
+      options.customData = { email: USER_EMAIL };
+      options.customer = { email: USER_EMAIL };
+    }
+
+    Paddle.Checkout.open(options);
 
     setTimeout(function() {
       btn.disabled = false;
