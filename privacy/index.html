@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — NotifyForm</title>
+  <title>Privacy Policy — NotifyForm: Discord Alerts for Google Forms™</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -28,62 +28,83 @@
 </head>
 <body>
 <nav>
-  <a href="/" class="nav-logo">notify<span>/</span>form</a>
+  <a href="/" class="nav-logo">Notify<span>Form</span></a>
 </nav>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: May 5, 2026</p>
+  <p class="meta">NotifyForm: Discord Alerts for Google Forms™ · Last updated: October 6, 2026</p>
 
-  <p>NotifyForm is operated by Mohammadali Saleh as a sole proprietor. This Privacy Policy explains how we collect, use, and protect information when you use our Google Workspace Add-ons ("the Service").</p>
+  <p>This Privacy Policy covers <strong>NotifyForm: Discord Alerts for Google Forms™</strong> ("NotifyForm", "the add-on"), a Google Forms™ add-on that posts a message in a Discord channel each time a form receives a response. NotifyForm is operated by Mohammadali Saleh as a sole proprietor ("we", "us"). It explains what data the add-on accesses, how that data is used, where it is stored, who it is shared with, and how you can delete it.</p>
 
-  <h2>1. Information We Collect</h2>
-  <p>The add-on stores the following data locally in your Google account using Google Apps Script's PropertiesService:</p>
+  <h2>1. Google user data we access</h2>
+  <p>When you install and use the add-on, it accesses the following data from your Google account:</p>
   <ul>
-    <li>Your Discord webhook URL (stored only in your own Google account, not on our servers)</li>
-    <li>Your notification count for the current month (stored only in your own Google account)</li>
-    <li>Your Pro status, verified against your Google account email</li>
+    <li><strong>Form responses:</strong> the questions and answers of each new response submitted to a form where you have turned NotifyForm on, plus the title of that form.</li>
+    <li><strong>Your Google account email address.</strong></li>
   </ul>
-  <p>When you purchase a Pro plan, our payment processor (Paddle) collects your name, email address, and payment information. We receive only your email address to verify Pro status. We do not store your payment card details.</p>
+  <p>The add-on only works on the form you open it in. It cannot see your other forms, files, emails, or contacts.</p>
 
-  <h2>2. How We Use Your Information</h2>
-  <p>We use the information above solely to provide the Service — to send notifications when your Google Form receives a submission, and to verify whether your account is on the Free or Pro plan. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
-
-  <h2>3. Google Form Data</h2>
-  <p>When a form is submitted, the add-on reads the response data to format and send it to your webhook. This data passes directly from Google's servers to your chosen platform (Discord, Slack, etc.) via your webhook URL. We do not store, log, or retain any form response data on our servers.</p>
-
-  <h2>4. Google API Scopes</h2>
-  <p>The add-on requests the following Google API permissions to operate:</p>
+  <h2>2. Google permissions requested and why</h2>
   <ul>
-    <li><strong>forms.currentonly</strong> — to read form responses when a submission is received, so they can be formatted and sent to your webhook.</li>
-    <li><strong>script.external_request</strong> — to POST form response data to your Discord webhook URL, and to verify your Pro status via our Cloudflare Worker.</li>
-    <li><strong>script.scriptapp</strong> — to install and manage the onFormSubmit trigger that fires automatically when your form receives a new response.</li>
-    <li><strong>script.container.ui</strong> — to display the configuration sidebar inside Google Forms where you enter your webhook URL and manage settings.</li>
-    <li><strong>userinfo.email</strong> — to identify your Google account email address for Pro status verification.</li>
-  </ul>
-  <p>No narrower scopes exist for these capabilities. All data remains between your Google Form, your chosen notification platform, and your Paddle account.</p>
-
-  <h2>5. Data Storage and Security</h2>
-  <p>All configuration data (webhook URL, notification count) is stored within your Google account using Google Apps Script's PropertiesService. This data is governed by Google's own security and privacy practices. We do not have access to this data unless you explicitly share it with us for support purposes.</p>
-
-  <h2>6. Third-Party Services</h2>
-  <ul>
-    <li><strong>Discord / Slack / Telegram:</strong> Form responses are sent to your chosen platform via webhook. Their use of this data is governed by their respective privacy policies.</li>
-    <li><strong>Paddle:</strong> Payment processing for Pro plans. Governed by <a href="https://www.paddle.com/legal/privacy">Paddle's Privacy Policy</a>.</li>
-    <li><strong>Cloudflare:</strong> We use Cloudflare Workers to verify Pro status by email. Only your Google account email is processed.</li>
-    <li><strong>Google:</strong> The add-on runs on Google Apps Script infrastructure. Governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+    <li><strong>forms.currentonly</strong> — to read new responses on the form where the add-on is turned on, so they can be sent to Discord.</li>
+    <li><strong>script.external_request</strong> — to send the response to your Discord webhook URL and to check your plan with our server.</li>
+    <li><strong>script.scriptapp</strong> — to create the trigger that runs when your form receives a new response.</li>
+    <li><strong>script.container.ui</strong> — to show the settings sidebar inside Google Forms™.</li>
+    <li><strong>userinfo.email</strong> — to read your Google account email address so we can check whether that account has a Pro plan.</li>
   </ul>
 
-  <h2>7. Data Retention</h2>
-  <p>Configuration data persists until you uninstall the add-on or manually clear it. You can remove all stored data at any time by uninstalling the add-on from your Google account.</p>
+  <h2>3. How we use Google user data</h2>
+  <ul>
+    <li><strong>Form responses</strong> are used for one purpose: to build the Discord message and send it to the webhook URL you entered.</li>
+    <li><strong>Your email address</strong> is used to show which account is signed in and to check whether that account is on the Free or Pro plan.</li>
+  </ul>
+  <p>We do not use Google user data for advertising, we do not sell it, and we do not use it to train or improve any artificial intelligence or machine learning model.</p>
 
-  <h2>8. Children's Privacy</h2>
-  <p>The Service is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+  <h2>4. Other information we collect</h2>
+  <ul>
+    <li><strong>Settings you enter:</strong> your Discord webhook URL, whether alerts are on, and your alert count for the current month.</li>
+    <li><strong>Purchase information:</strong> if you buy a Pro plan, our payment provider Paddle collects your name, email address, and payment details. We receive your email address and subscription status. We never receive or store your card details.</li>
+  </ul>
 
-  <h2>9. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. We will notify users of material changes by updating the "Last updated" date at the top of this page.</p>
+  <h2>5. Where data is stored and how it is protected</h2>
+  <ul>
+    <li><strong>Form responses are not stored by us.</strong> They are read inside Google Apps Script and sent straight to Discord. We keep no copy and no log of them.</li>
+    <li><strong>Your settings</strong> (webhook URL, alert count, cached plan status) are stored inside your own Google account using Google Apps Script's PropertiesService. We cannot read them.</li>
+    <li><strong>Your email address</strong> is sent over an encrypted (HTTPS) connection to our server on Cloudflare Workers each time the add-on checks your plan. If you have bought a Pro plan, your email address and plan status are stored in Cloudflare's key-value storage so the add-on can recognise your account. If you have not bought a Pro plan, your email address is not stored.</li>
+  </ul>
+  <p>All data sent between the add-on, our server, Discord, and Paddle travels over HTTPS. Access to our Cloudflare and Paddle accounts is limited to the operator and protected by two-factor authentication.</p>
 
-  <h2>10. Contact</h2>
-  <p><a href="mailto:contact@notifyform.com">contact@notifyform.com</a></p>
+  <h2>6. Who data is shared with</h2>
+  <p>We share data only with the services needed to run the add-on:</p>
+  <ul>
+    <li><strong>Discord:</strong> receives your form responses at the webhook URL you provide. This is the purpose of the add-on and happens only on your instruction. See <a href="https://discord.com/privacy">Discord's Privacy Policy</a>.</li>
+    <li><strong>Cloudflare:</strong> hosts the server that checks plan status and stores the email addresses of Pro subscribers. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</li>
+    <li><strong>Paddle:</strong> processes Pro plan payments as merchant of record. See <a href="https://www.paddle.com/legal/privacy">Paddle's Privacy Policy</a>.</li>
+    <li><strong>Google:</strong> the add-on runs on Google Apps Script. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+  </ul>
+  <p>We do not sell, rent, or transfer your data to anyone else, except where required by law.</p>
+
+  <h2>7. Google API Services User Data Policy</h2>
+  <p>NotifyForm's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>8. Data retention and deletion</h2>
+  <ul>
+    <li><strong>Settings in your Google account</strong> stay until you uninstall the add-on. Uninstalling removes the add-on's access to your account.</li>
+    <li><strong>Pro subscriber email addresses</strong> are kept while the subscription is active and removed when it ends or when you ask us to delete them.</li>
+    <li><strong>To delete your data,</strong> email <a href="mailto:contact@notifyform.com">contact@notifyform.com</a> from the address you want removed. We delete it within 30 days.</li>
+    <li><strong>To remove access,</strong> uninstall the add-on or revoke it at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+  </ul>
+
+  <h2>9. Children's privacy</h2>
+  <p>The add-on is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>If we change this policy we will update the "Last updated" date at the top of this page. If a change affects how Google user data is used, we will ask for your consent again before it applies to you.</p>
+
+  <h2>11. Contact</h2>
+  <p>Mohammadali Saleh, Arusha, Tanzania · <a href="mailto:contact@notifyform.com">contact@notifyform.com</a></p>
+
+  <p class="meta" style="margin-top:36px;margin-bottom:0">Google Forms™ and Google Workspace™ are trademarks of Google LLC.</p>
 </main>
 <footer>
   <a href="/">Home</a>
